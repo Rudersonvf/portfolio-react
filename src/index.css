@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/*-----------------------------------------------------------------*/
+/* ANIMATIONS */
+
+@keyframes svg-anim {
+  0% {
+    stroke-dashoffset: 140;
+    fill: transparent;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: white;
+  }
+}
+
+/*-----------------------------------------------------------------*/
+/* VARS */
+
+:root {
+  --color-bg-primary: #3c3c3c;
+  --color-bg-secondary: #000;
+  --color-font-primary: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  background: linear-gradient(
+    var(--color-bg-primary),
+    var(--color-bg-secondary)
+  );
+  height: 100vh;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: unset;
+}
+
+/*-----------------------------------------------------------------*/
+/* generic styles */
