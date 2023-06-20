@@ -5,7 +5,7 @@
 
 @keyframes svg-anim {
   0% {
-    stroke-dashoffset: 140;
+    stroke-dashoffset: 1090;
     fill: transparent;
   }
   50% {
@@ -14,7 +14,7 @@
   }
   100% {
     stroke-dashoffset: 0;
-    fill: white;
+    fill: var(--color-font-primary);
   }
 }
 
@@ -24,7 +24,7 @@
 :root {
   --color-bg-primary: #3c3c3c;
   --color-bg-secondary: #000;
-  --color-font-primary: #fff;
+  --color-font-primary: #c9c9c9;
 }
 
 * {
@@ -51,3 +51,23 @@ a:hover {
 
 /*-----------------------------------------------------------------*/
 /* generic styles */
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+@media (min-width: 320px) {
+.pf-container {
+  border: 1px solid blue;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+}
+}
+

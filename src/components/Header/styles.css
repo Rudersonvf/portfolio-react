@@ -12,9 +12,6 @@
     align-items: end;
     justify-content: center;
     gap: 30px;
-  }
-
-  header nav a {
     font-size: 16px;
     color: var(--color-font-primary);
   }
