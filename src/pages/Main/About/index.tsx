@@ -1,4 +1,5 @@
 import Button from "../../../components/Button";
+import Tittle from "../../../components/Tittle";
 import "./styles.css";
 
 export default function About() {
@@ -24,8 +25,7 @@ export default function About() {
         </div>
       </section>
       <section className="pf-container">
-        <hr />
-        <h2 className="pf-h2-tittle">HABILIDADES</h2>
+       <Tittle text={"HABILIDADES"}/>
       </section>
     </main>
   );

@@ -89,14 +89,6 @@ a:hover {
     flex-direction: column;
     gap: 35.5px;
   }
-
-  .pf-h2-tittle {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--color-font-primary);
-    margin: 0 auto;
-    position: relative;
-  }
 }
 
 @media (min-width: 576px) {
