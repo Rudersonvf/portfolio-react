@@ -7,19 +7,19 @@ export default function Header() {
       <nav>
         <NavLink
           className={({ isActive }) => (isActive ? "fw-700" : "fw-400")}
-          to={""}
+          to={"/about"}
         >
           Sobre
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? "fw-700" : "fw-400")}
-          to={""}
+          to={"/projects"}
         >
           Projetos
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? "fw-700" : "fw-400")}
-          to={""}
+          to={"/contact"}
         >
           Contato
         </NavLink>

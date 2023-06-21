@@ -37,9 +37,15 @@
 html,
 body {
   background: linear-gradient(
+    to bottom,
     var(--color-bg-primary),
     var(--color-bg-secondary)
   );
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.home {
   height: 100vh;
 }
 
@@ -61,13 +67,32 @@ a:hover {
 }
 
 @media (min-width: 320px) {
-.pf-container {
-  border: 1px solid blue;
-  width: 100%;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 75px;
-}
+  #root {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+  }
+
+  main {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .pf-container {
+    border: 1px solid blue;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+  }
 }
 
+@media (min-width: 576px) {
+  #root {
+    gap: 150px;
+  }
+
+  .pf-container {
+    gap: 150px;
+  }
+}
