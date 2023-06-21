@@ -2,18 +2,19 @@ import { Outlet, useLocation } from "react-router-dom";
 import Header from "../../components/Header";
 import ArrowBack from "../../components/ArrowBack";
 import { useEffect } from "react";
+import Footer from "../../components/Footer";
 
 export default function Main() {
   const location = useLocation();
 
   useEffect(() => {
-    const body = document.querySelector('body');
-    const isHomePage = window.location.pathname === '/home';
+    const body = document.querySelector("body");
+    const isHomePage = window.location.pathname === "/home";
     if (body) {
       if (isHomePage) {
-        body.classList.add('home');
+        body.classList.add("home");
       } else {
-        body.classList.remove('home');
+        body.classList.remove("home");
       }
     }
   }, [location]);
@@ -26,6 +27,7 @@ export default function Main() {
       <Header />
       {location.pathname !== "/home" && <ArrowBack />}
       <Outlet />
+      <Footer />
     </>
   );
 }
