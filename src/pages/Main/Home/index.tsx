@@ -17,7 +17,6 @@ export default function Home() {
             Olá, meu nome é <span>Ruderson Florentino</span>, sou desenvolvedor
             <br />
           </p>
-
           <p>Fullstack Java Spring + React JS</p>
         </div>
       </section>

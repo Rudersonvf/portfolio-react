@@ -13,6 +13,7 @@
 
   .pf-text-container {
     margin: 0 auto;
+    margin-top: 35.5px;
     display: flex;
     flex-direction: column;
     gap: 10px;

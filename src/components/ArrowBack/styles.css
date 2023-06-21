@@ -1,6 +1,5 @@
 @media (min-width: 320px) {
   .pf-arrow-container {
-    border: 1px solid pink;
     width: 50px;
     height: 50px;
     margin: 0 auto;
@@ -14,7 +13,6 @@
 
 @media (min-width: 576px) {
   .pf-arrow-container {
-    border: 1px solid pink;
     width: 30px;
     height: 30px;
   }

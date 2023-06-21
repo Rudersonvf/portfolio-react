@@ -25,6 +25,7 @@
   --color-bg-primary: #3c3c3c;
   --color-bg-secondary: #000;
   --color-font-primary: #c9c9c9;
+  --color-border-primary: #c9c9c9;
 }
 
 * {
@@ -74,6 +75,9 @@ a:hover {
   }
 
   main {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
     width: 100%;
     padding: 0 20px;
   }
@@ -83,7 +87,15 @@ a:hover {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 75px;
+    gap: 35.5px;
+  }
+
+  .pf-h2-tittle {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-font-primary);
+    margin: 0 auto;
+    position: relative;
   }
 }
 
@@ -92,7 +104,17 @@ a:hover {
     gap: 150px;
   }
 
+  main {
+    padding: 0 75px;
+  }
+
   .pf-container {
-    gap: 150px;
+    gap: 75px;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    padding: 0 150px;
   }
 }
