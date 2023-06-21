@@ -1,16 +1,25 @@
-button {
-    width: 200px;
-    height: 50px;
+@media (min-width: 320px) {
+  button {
+    width: 150px;
+    height: 40px;
     border: 2px solid var(--color-border-primary);
     border-radius: 6px;
     background-color: transparent;
     color: var(--color-font-primary);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    transition: .2s ease-in-out;
-}
+    transition: 0.2s ease-in-out;
+  }
 
-button:hover {
+  button:hover {
     box-shadow: 0px 0px 10px 1px var(--color-border-primary);
+  }
+}
+@media (min-width: 576px) {
+  button {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+  }
 }

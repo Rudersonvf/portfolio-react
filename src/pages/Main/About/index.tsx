@@ -1,4 +1,5 @@
 import Button from "../../../components/Button";
+import Footer from "../../../components/Footer";
 import Tittle from "../../../components/Tittle";
 import "./styles.css";
 
@@ -25,8 +26,50 @@ export default function About() {
         </div>
       </section>
       <section className="pf-container">
-       <Tittle text={"HABILIDADES"}/>
+        <Tittle text={"HABILIDADES"} />
+        <div className="pf-abilities-container">
+          <div className="pf-abilities-card">
+            <h3>BACK-END</h3>
+            <div className="pf-abilities-details">
+              <p>• Java</p>
+              <p>• POO</p>
+              <p>• Spring Boot</p>
+              <p>• Maven</p>
+              <p>• JPA</p>
+              <p>• Postman</p>
+            </div>
+          </div>
+          <div className="pf-abilities-card">
+            <h3>FRONT-END</h3>
+            <div className="pf-abilities-details">
+              <p>• HTML</p>
+              <p>• CSS</p>
+              <p>• Java Script</p>
+              <p>• Type Script</p>
+              <p>• React</p>
+              <p>• Sass</p>
+            </div>
+          </div>
+          <div className="pf-abilities-card">
+            <h3>DATA-BASE</h3>
+            <div className="pf-abilities-details">
+              <p>• MySQL</p>
+              <p>• PostgreSQL</p>
+              <p>• Modelagem de dados</p>
+            </div>
+          </div>
+          <div className="pf-abilities-card">
+            <h3>MISC</h3>
+            <div className="pf-abilities-details">
+              <p>• Versionamento: GIT</p>
+              <p>• Docker</p>
+              <p>• SEO</p>
+              <p>• CI/CD </p>
+            </div>
+          </div>
+        </div>
       </section>
+      <Footer />
     </main>
   );
 }
