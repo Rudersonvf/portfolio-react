@@ -1,5 +1,37 @@
-.pf-project-card {
+@media (min-width: 320px) {
+  .pf-project-card {
     width: 250px;
     border: 250px;
     border: 1px solid var(--color-border-primary);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .pf-project-card h3 {
+    color: var(--color-font-primary);
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .pf-project-card p {
+    color: var(--color-font-primary);
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+/*-----------------------------------------------------------------------*/
+
+@media (min-width: 576px) {
+  .pf-project-card h3 {
+    font-size: 24px;
+  }
+
+  .pf-project-card p {
+    font-size: 20px;
+  }
 }

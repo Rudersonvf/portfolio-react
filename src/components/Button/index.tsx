@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./styles.css";
 
 type Props = {
@@ -7,8 +6,8 @@ type Props = {
 
 export default function Button({ text }: Props) {
   return (
-    <Link to={""}>
+    <a href="https://drive.google.com/file/d/1IWpexwljwkMzk0L0IGNA46V-oZ7RC-Ad/view" target="_blanck">
       <button>{text}</button>
-    </Link>
+    </a>
   );
 }
