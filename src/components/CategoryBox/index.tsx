@@ -7,12 +7,14 @@ type Props = {
 
 export default function CategoryBox({ categories }: Props) {
   return (
-    <div className="pf-category-box">
+    <div className="pf-category-container">
       {categories.map((category) => (
-        <span key={category.id} className="category">
-          {category.name}
-        </span>
+        <div key={category.id} className="pf-category-box">
+          <span key={category.id} className="category">
+            {category.name}
+          </span>
+        </div>
       ))}
     </div>
-  );
+  )
 }

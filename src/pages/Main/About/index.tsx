@@ -1,5 +1,4 @@
 import Button from "../../../components/Button";
-import Footer from "../../../components/Footer";
 import Tittle from "../../../components/Tittle";
 import "./styles.css";
 

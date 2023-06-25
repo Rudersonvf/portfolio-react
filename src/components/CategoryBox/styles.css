@@ -1,3 +1,11 @@
+.pf-category-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+}
+
 .pf-category-box {
   width: 80px;
   height: 25px;

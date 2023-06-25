@@ -1,11 +1,11 @@
 @media (min-width: 320px) {
   .pf-projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 100px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 100px;
   }
 }
 
 /*-----------------------------------------------------------------------*/
-
