@@ -21,7 +21,13 @@
   }
 
   .pf-footer-container p {
-    font-size: 16px;
+    font-size: 12px;
     color: var(--color-font-primary);
+  }
+}
+
+@media (min-width: 576px) {
+  .pf-footer-container p {
+    font-size: 16px;
   }
 }

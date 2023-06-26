@@ -17,7 +17,7 @@
   }
 
   .pf-contact-card svg {
-    width: 150px;
+    width: 100px;
     fill: var(--color-font-primary);
     transition: 0.2s ease-in-out;
   }
@@ -28,7 +28,7 @@
   }
 
   .pf-contact-card span {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--color-font-primary);
   }
@@ -37,4 +37,11 @@
 /*-----------------------------------------------------------------------*/
 
 @media (min-width: 576px) {
+  .pf-contact-card svg {
+    width: 150px;
+  }
+
+  .pf-contact-card span {
+    font-size: 20px;
+  }
 }

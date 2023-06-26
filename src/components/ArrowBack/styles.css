@@ -13,18 +13,18 @@
 
 @media (min-width: 576px) {
   .pf-arrow-container {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
 
   .pf-arrow-container svg {
-    width: 30px;
+    width: 40px;
   }
 
   .stick {
     position: fixed;
-    top: 50px;
-    left: 20px;
+    top: 40px;
+    left: 70px;
     z-index: 999;
   }
 }

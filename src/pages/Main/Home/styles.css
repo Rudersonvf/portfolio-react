@@ -8,7 +8,7 @@
     stroke: var(--color-font-primary);
     stroke-dashoffset: 1090;
     stroke-dasharray: 1090;
-    animation: svg-anim 4s ease-in-out forwards;
+    animation: svg-anim 3s ease-in-out forwards;
   }
 
   .pf-text-container {
