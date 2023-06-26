@@ -3,7 +3,9 @@
 
 # Sobre o projeto
 
-Trata-se de um portfolio desenvolvido em React com Type Script juntamente com o Vite
+Trata-se de um portfolio desenvolvido em React com Type Script juntamente com o Vite.
+A parte de UI/UX foi desenvolvida por mim usando o Figma.
+Os projetos são adicionados de forma dinâmica a partir de um arquivo json hospedado no GitHub.
 
 ## Layout
 ![Layout 1](https://raw.githubusercontent.com/Rudersonvf/assets/main/port1.png)
