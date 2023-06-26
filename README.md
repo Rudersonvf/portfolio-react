@@ -6,7 +6,7 @@
 Tratas-e de um portfolio desenvolvido em React com Type Script juntamente com o Vite
 
 ## Layout
-![Layout 1](https://raw.githubusercontent.com/Rudersonvf/assets/main/crud1.png)
+![Layout 1](https://raw.githubusercontent.com/Rudersonvf/assets/main/port1.png)
 
 # Tecnologias utilizadas
 - HTML
