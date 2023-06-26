@@ -6,6 +6,7 @@ export type ProjectDTO = {
   about: string;
   description: string;
   photo_url: string;
-  how_to: string;
+  git_link: string;
+  prod_link: string;
   categories: CategoryDTO[];
 };

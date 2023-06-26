@@ -48,7 +48,7 @@ export default function Contact() {
                 transform="matrix(1, 0, 0, 1, -40.961117, 47.095123)"
               ></path>
             </svg>
-            <span>Instagram</span>
+            <span>GitHub</span>
           </a>
         </div>
       </section>

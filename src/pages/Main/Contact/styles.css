@@ -19,6 +19,12 @@
   .pf-contact-card svg {
     width: 150px;
     fill: var(--color-font-primary);
+    transition: 0.2s ease-in-out;
+  }
+
+  .pf-contact-card:hover svg{
+    transform: scale(1.05);
+    
   }
 
   .pf-contact-card span {

@@ -3,28 +3,89 @@ import "./styles.css";
 import { ProjectDTO } from "../../../models/ProjectDTO";
 import * as projectService from "../../../services/project-service";
 import { useState, useEffect } from "react";
+import Tittle from "../../../components/Tittle";
 
 export default function ProjectDetails() {
+  const params = useParams();
 
-    const params = useParams();
+  const [project, setProject] = useState<ProjectDTO>();
 
-    const [project, setProject] = useState<ProjectDTO>();
-  
-    useEffect(() => {
-      projectService.findById(Number(params.id)).then((response) => {
+  useEffect(() => {
+    projectService
+      .findById(Number(params.id))
+      .then((response) => {
         setProject(response);
         console.log(response);
       })
-      .catch(error => {
-          console.log(error.response)
+      .catch((error) => {
+        console.log(error.response);
       });
-    }, []);
+  });
 
-    return(
-        <main>
-            <section>
-                {project && <h1>Detalhes do projeto{project.name}</h1>}
-            </section>
-        </main>
-    );
+  function renderLinks() {
+    if (project) {
+      const { git_link, prod_link } = project;
+      const links = [];
+      if (git_link) {
+        links.push(
+          <a href={git_link} target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 120 117.036" x="0px" y="0px">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M59.9995 0C26.867 0 0 26.8611 0 59.9995C0 86.5098 17.1917 108.999 41.0313 116.934C44.0289 117.49 45.1298 115.632 45.1298 114.048C45.1298 112.617 45.0741 107.89 45.0483 102.877C28.3564 106.506 24.8342 95.7977 24.8342 95.7977C22.1049 88.8626 18.1723 87.0186 18.1723 87.0186C12.7276 83.2947 18.5827 83.3722 18.5827 83.3722C24.6067 83.7944 27.7801 89.5551 27.7801 89.5551C33.1315 98.7258 41.8162 96.0749 45.2401 94.5428C45.7786 90.665 47.3335 88.0171 49.0494 86.5188C35.7227 85.0036 21.7124 79.8579 21.7124 56.8678C21.7124 50.3172 24.0572 44.9649 27.8954 40.7621C27.2714 39.2518 25.2177 33.1494 28.4756 24.8849C28.4756 24.8849 33.513 23.2723 44.9788 31.035C49.7658 29.7047 54.8995 29.036 59.9995 29.0131C65.0965 29.036 70.2332 29.7027 75.0292 31.0331C86.481 23.2703 91.5125 24.8829 91.5125 24.8829C94.7783 33.1464 92.7246 39.2499 92.1016 40.7601C95.9487 44.9629 98.2767 50.3152 98.2767 56.8658C98.2767 79.9106 84.2405 84.9837 70.8801 86.4701C73.0331 88.3321 74.9507 91.9844 74.9507 97.5812C74.9507 105.609 74.8811 112.07 74.8811 114.047C74.8811 115.643 75.9621 117.514 79.0025 116.925C102.828 108.982 120 86.4999 120 59.9995C119.999 26.8631 93.1349 0 59.9995 0Z"
+              ></path>
+            </svg>
+            <span>GitHub</span>
+          </a>
+        );
+      }
+      if (prod_link) {
+        links.push(
+          <a href={prod_link} target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 120 120" x="0px" y="0px">
+              <path d="M47.1 109.35C44.5 105.35 42.35 101.225 40.65 96.975C38.95 92.725 37.55 87.9 36.45 82.5H13.8C17.3 89.5 21.85 95.25 27.45 99.75C33.05 104.25 39.6 107.45 47.1 109.35ZM10.8 73.5H34.8C34.5 71.1 34.3 68.925 34.2 66.975C34.1 65.025 34.05 62.8 34.05 60.3C34.05 58.2 34.075 56.075 34.125 53.925C34.175 51.775 34.35 49.35 34.65 46.65H10.8C10.1 49.05 9.625 51.275 9.375 53.325C9.125 55.375 9 57.7 9 60.3C9 62.9 9.125 65.15 9.375 67.05C9.625 68.95 10.1 71.1 10.8 73.5ZM13.8 37.65H36.3C37.5 32.15 39 27.2 40.8 22.8C42.6 18.4 44.75 14.3 47.25 10.5C38.75 13.4 32 16.875 27 20.925C22 24.975 17.6 30.55 13.8 37.65ZM45.6 37.65H74.55C73.05 31.25 71.125 25.725 68.775 21.075C66.425 16.425 63.5 12.3 60 8.7C56.5 12.4 53.575 16.65 51.225 21.45C48.875 26.25 47 31.65 45.6 37.65ZM83.85 37.65H106.2C102.7 31.15 98.075 25.6 92.325 21C86.575 16.4 80.1 12.95 72.9 10.65C75.4 14.45 77.525 18.55 79.275 22.95C81.025 27.35 82.55 32.25 83.85 37.65ZM60 120C51.6 120 43.75 118.475 36.45 115.425C29.15 112.375 22.8 108.15 17.4 102.75C12 97.35 7.75 91.025 4.65 83.775C1.55 76.525 0 68.7 0 60.3C0 51.9 1.55 44.025 4.65 36.675C7.75 29.325 12 22.95 17.4 17.55C22.8 12.15 29.15 7.875 36.45 4.725C43.75 1.575 51.6 0 60 0C68.4 0 76.25 1.575 83.55 4.725C90.85 7.875 97.2 12.15 102.6 17.55C108 22.95 112.25 29.325 115.35 36.675C118.45 44.025 120 51.9 120 60.3C120 62 119.95 63.7 119.85 65.4C119.75 67.1 119.55 68.8 119.25 70.5H109.95C110.35 68.8 110.625 67.175 110.775 65.625C110.925 64.075 111 62.3 111 60.3C111 57.7 110.875 55.375 110.625 53.325C110.375 51.275 109.9 49.05 109.2 46.65H85.2C85.5 49.65 85.725 52.125 85.875 54.075C86.025 56.025 86.1 58.1 86.1 60.3C86.1 61.7 86.075 63.125 86.025 64.575C85.975 66.025 85.85 68 85.65 70.5H76.5C76.7 68.4 76.85 66.6 76.95 65.1C77.05 63.6 77.1 62 77.1 60.3C77.1 58.2 77.05 56.175 76.95 54.225C76.85 52.275 76.6 49.75 76.2 46.65H43.95C43.55 49.75 43.3 52.275 43.2 54.225C43.1 56.175 43.05 58.2 43.05 60.3C43.05 62.3 43.1 64.225 43.2 66.075C43.3 67.925 43.55 70.4 43.95 73.5H70.5V82.5H45.6C47.6 90 49.7 95.95 51.9 100.35C54.1 104.75 56.8 108.3 60 111C62.1 108.8 64.025 106.35 65.775 103.65C67.525 100.95 69.1 98.15 70.5 95.25V119.1C68.8 119.4 67.075 119.625 65.325 119.775C63.575 119.925 61.8 120 60 120ZM107.7 114.15L88.5 94.95V110.4H79.5V79.5H110.4V88.5H94.8L114 107.7L107.7 114.15Z"></path>
+            </svg>
+            <span>Produção</span>
+          </a>
+        );
+      }
+      return <div className="pf-link-container">{links}</div>;
+    }
+    return null;
+
+    console.log(renderLinks());
+  }
+
+  return (
+    <main>
+      <section className="pf-container">
+        <Tittle text={project ? project.name : ""} />
+        <div className="pf-details-container">
+          <div className="pf-details-inner-container">
+            <h2>Sobre o projeto</h2>
+            <p>{project?.description}</p>
+          </div>
+          <div className="pf-details-inner-container">
+            <hr />
+            <h2>Layout</h2>
+            <img src={project?.photo_url} alt={project?.name} />
+          </div>
+          <div className="pf-details-inner-container">
+            <hr />
+            <h2>Informações</h2>
+            <p>
+              Para mais informaçẽs sobre como executar o projeto na maquina
+              local, leia o read-me do projeto no link do GitHub abaixo
+            </p>
+          </div>
+          <div className="pf-details-inner-container">
+            <hr />
+            <h2>Links</h2>
+            {renderLinks()}
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 }

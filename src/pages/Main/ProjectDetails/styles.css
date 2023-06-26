@@ -1,0 +1,67 @@
+.pf-details-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+}
+
+.pf-details-inner-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.pf-details-inner-container hr {
+  width: 105%;
+  height: 1px;
+  background-color: var(--color-border-primary);
+  border: none;
+  border-width: 0.5px;
+  margin-left: -2.5%;
+  margin-right: -2.5%;
+  margin-bottom: -30px;
+}
+
+.pf-details-inner-container h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-font-primary);
+}
+
+.pf-details-inner-container p {
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+  color: var(--color-font-primary);
+}
+
+.pf-link-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+
+.pf-link-container svg {
+  width: 120px;
+  fill: var(--color-font-primary);
+}
+
+.pf-link-container span {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--color-font-primary);
+}
+
+.pf-link-container a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+}
+
+.pf-link-container a:hover {
+  transform: scale(1.1);
+}
