@@ -3,7 +3,7 @@
 
 # Sobre o projeto
 
-Tratas-e de um portfolio desenvolvido em React com Type Script juntamente com o Vite
+Trata-se de um portfolio desenvolvido em React com Type Script juntamente com o Vite
 
 ## Layout
 ![Layout 1](https://raw.githubusercontent.com/Rudersonvf/assets/main/port1.png)
