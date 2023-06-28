@@ -44,10 +44,7 @@ body {
   );
   background-repeat: no-repeat round;
   width: 100%;
-}
-
-.home {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 a,
