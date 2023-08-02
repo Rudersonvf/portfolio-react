@@ -20,7 +20,7 @@ export default function ProjectDetails() {
       .catch((error) => {
         console.log(error.response);
       });
-  });
+  },[]);
 
   function renderLinks() {
     if (project) {
